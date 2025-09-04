@@ -7,7 +7,7 @@ This image file can be used by the [Raspberry Pi Imager](https://www.raspberrypi
 
 **Background**
 
-Sometimes it is useful to have more than the Raspberry Pi default of two partitions (boot and system)
+Sometimes it is useful to have more than the Raspberry Pi default of two partitions (boot and system).
 
 A third partition is useful if you want to use a read-only system file system BUT retain a user home space as read-write.
 
@@ -51,8 +51,8 @@ The parameters are the same as for backup.sh
 
 **Compressed images**
 
-Compressed images will be mounted by archivemount on a local folder (/tmp/compressed) before the data transfer starts
+Compressed images will be mounted by archivemount on a local folder (/tmp/compressed) before the data transfer starts.
 
 Note: if the compressed file is on a network drive the mount will be slow as archivemount reads the entire compressed file to ascertain the compressed size.
 
-If --keepmounted is present the uncompressed image will not be dismounted and deleted after the restore
+If --keepmounted is present the uncompressed image will not be dismounted after the restore.
