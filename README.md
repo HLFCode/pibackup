@@ -1,14 +1,17 @@
 # pibackup
-Bash commands to backup and restore used space only (not the entire sd card)
+Bash scripts to backup and restore used space only (not the entire sd card)
 
-Simple wrapper for bash dd to backup only the partitions declared by fdisk to an image file
-This file can be used by the Raspberry Pi Imager to create a copy of the backed up system
+These are simple wrappers for bash dd to backup (and restore) only the partitions (as declared by fdisk) to an image file.
 
-Sometimes it is useful to have more than the default two partitions (boot and system)
+This image file can be used by the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) or the restore script to create a copy of the backed up system on a new sd card.
 
-The backup wrapper command checks the last used sector and instructs dd to copy up to that sector - no matter how may partitons there are on the sd card
+**Background**
 
-A third partition is useful if you want to run a read-only file system BUT retain a user home space as read-write.
+Sometimes it is useful to have more than the Raspberry Pi default of two partitions (boot and system)
+
+A third partition is useful if you want to use a read-only system file system BUT retain a user home space as read-write.
+
+The backup wrapper command checks the last used sector on the sd card and instructs dd to copy up to that sector - no matter how may partitons there are on the sd card
 
 ## Usage
 
